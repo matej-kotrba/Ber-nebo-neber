@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+#title {
+  font-size: 3rem;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-bottom: white 2px solid;
+  text-shadow: 0 0 5px white;
+  animation: title-glowing-effect 6s ease infinite;
+  background-color: black;
+  box-shadow: 0 0px 25px 5px black;
+}
+
+@keyframes title-glowing-effect {
+  0% {
+    text-shadow: 0 0 5px white;
+  }
+  40% {
+    text-shadow: 0 0 15px white;
+  }
+  50% {
+    text-shadow: 0 0 15px white;
+  }
+  90% {
+    text-shadow: 0 0 5px white;
+  }
+  100% {
+    text-shadow: 0 0 5px white;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  background-color: #222222;
+}
+
+#allRevealedTiles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 55px;
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 0 15px;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  user-select: none;
+}
+#game > * {
+  margin: 15px;
+  width: clamp(400px, 80%, 1000px);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  margin-inline: auto;
+  text-align: center;
+  column-gap: 25px;
+}
+#game > * > div {
+  padding: 15px;
+}
+#game #overviewTable {
+  text-align: center;
+  background-image: radial-gradient(ellipse at center, rgb(148, 148, 148), black);
+  padding: 15px;
+  border-radius: 10px;
+  user-select: none;
+}
+#game #overviewTable .overview-tile {
+  border: 1px black solid;
+}
+#game #overviewTable .overview-tile:nth-child(0) {
+  background-color: rgb(207, 228, 246);
+}
+#game #overviewTable .overview-tile:nth-child(1) {
+  background-color: rgb(207, 228, 246);
+}
+#game #overviewTable .overview-tile:nth-child(2) {
+  background-color: rgb(207, 228, 246);
+}
+#game #overviewTable .overview-tile:nth-child(3) {
+  background-color: rgb(207, 228, 246);
+}
+#game #overviewTable .overview-tile:nth-child(4) {
+  background-color: rgb(207, 228, 246);
+}
+#game #overviewTable .overview-tile:nth-child(5) {
+  background-color: rgb(207, 228, 246);
+}
+#game #overviewTable .overview-tile:nth-child(6) {
+  background-color: rgb(201, 250, 224);
+}
+#game #overviewTable .overview-tile:nth-child(7) {
+  background-color: rgb(201, 250, 224);
+}
+#game #overviewTable .overview-tile:nth-child(8) {
+  background-color: rgb(201, 250, 224);
+}
+#game #overviewTable .overview-tile:nth-child(9) {
+  background-color: rgb(201, 250, 224);
+}
+#game #overviewTable .overview-tile:nth-child(10) {
+  background-color: rgb(201, 250, 224);
+}
+#game #overviewTable .overview-tile:nth-child(11) {
+  background-color: rgb(160, 255, 204);
+}
+#game #overviewTable .overview-tile:nth-child(12) {
+  background-color: rgb(160, 255, 204);
+}
+#game #overviewTable .overview-tile:nth-child(13) {
+  background-color: rgb(160, 255, 204);
+}
+#game #overviewTable .overview-tile:nth-child(14) {
+  background-color: rgb(160, 255, 204);
+}
+#game #overviewTable .overview-tile:nth-child(15) {
+  background-color: rgb(160, 255, 204);
+}
+#game #overviewTable .overview-tile:nth-child(16) {
+  background-color: rgb(251, 255, 173);
+}
+#game #overviewTable .overview-tile:nth-child(17) {
+  background-color: rgb(251, 255, 173);
+}
+#game #overviewTable .overview-tile:nth-child(18) {
+  background-color: rgb(251, 255, 173);
+}
+#game #overviewTable .overview-tile:nth-child(19) {
+  background-color: rgb(251, 255, 173);
+}
+#game #overviewTable .overview-tile:nth-child(20) {
+  background-color: rgb(255, 195, 138);
+}
+#game #overviewTable .overview-tile:nth-child(21) {
+  background-color: rgb(255, 195, 138);
+}
+#game #overviewTable .overview-tile:nth-child(22) {
+  background-color: rgb(255, 195, 138);
+}
+#game #overviewTable .overview-tile:nth-child(23) {
+  background-color: rgb(255, 159, 132);
+}
+#game #overviewTable .overview-tile:nth-child(24) {
+  background-color: rgb(255, 159, 132);
+}
+#game #overviewTable .overview-tile:nth-child(25) {
+  background-color: rgb(255, 159, 132);
+}
+#game #overviewTable .overview-tile:nth-child(26) {
+  background-color: rgb(255, 137, 98);
+}
+#game #overviewTable .overview-tile.active {
+  background-color: black;
+}
+#game #gameTable {
+  text-align: center;
+}
+#game #gameTable .tile {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+#game #gameTable .tile.active {
+  background-color: royalblue;
+}
+#game #gameTable .tile::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-image: radial-gradient(circle at 0%, transparent 20%, yellow);
+  transition: 0.3s ease;
+}
+#game #gameTable .tile:not(.active):hover::before {
+  left: 0;
+}
+#game #gameTable .tile > span:first-child {
+  text-align: left;
+}
+#game #gameTable .tile > span:last-child {
+  color: black;
+}
+#game #gameTable .tile.selected {
+  outline: 2px solid yellow;
+  z-index: 5;
+}
+#game #calcTable {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  user-select: text;
+}
+#game #calcTable #bednicka {
+  width: 100%;
+  font-size: 2.5rem;
+}
+#game #calcTable #bednicka label {
+  color: white;
+}
+#game #calcTable #bednicka input {
+  width: 100%;
+  font-size: 2rem;
+}
+#game #calcTable #bednicka > #bednickaTile .tile {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+#game #calcTable #bednicka > #bednickaTile .tile.active {
+  background-color: royalblue;
+}
+#game #calcTable #bednicka > #bednickaTile .tile::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-image: radial-gradient(circle at 0%, transparent 20%, yellow);
+  transition: 0.3s ease;
+}
+#game #calcTable #bednicka > #bednickaTile .tile:not(.active):hover::before {
+  left: 0;
+}
+#game #calcTable #bednicka > #bednickaTile .tile > span:first-child {
+  text-align: left;
+}
+#game #calcTable #bednicka > #bednickaTile .tile > span:last-child {
+  color: black;
+}
+#game #calcTable #bednicka > #bednickaTile .tile {
+  padding: 15px;
+}
+#game #calcTable #nabidka {
+  font-size: 2rem;
+  color: white;
+  margin-top: 35%;
+}
+
+/*# sourceMappingURL=index.css.map */
