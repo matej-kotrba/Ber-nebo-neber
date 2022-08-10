@@ -1,0 +1,12 @@
+{
+  "name": "berneboneber",
+  "version": "1.0.0",
+  "description": "Game for oveč cz, 2 500 000 ovecoins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compileSass": "sass --watch src/scss/index.scss:dist/css/index.css"
+  },
+  "author": "mkit2009",
+  "license": "ISC"
+}

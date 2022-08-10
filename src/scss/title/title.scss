@@ -1,0 +1,29 @@
+#title {
+  font-size: 3rem;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-bottom: white 2px solid;
+  text-shadow: 0 0 5px white;
+  animation: title-glowing-effect 6s ease infinite;
+  background-color: black;
+  box-shadow: 0 0px 25px 5px black;
+}
+
+@keyframes title-glowing-effect {
+  0% {
+    text-shadow: 0 0 5px white;
+  }
+  40% {
+    text-shadow: 0 0 15px white;
+  }
+  50% {
+    text-shadow: 0 0 15px white;
+  }
+  90% {
+    text-shadow: 0 0 5px white;
+  }
+  100% {
+    text-shadow: 0 0 5px white;
+  }
+}
